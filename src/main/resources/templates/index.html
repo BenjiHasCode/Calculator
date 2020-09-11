@@ -3,47 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/MyCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Javascript Calculator</h1> <!--Skal stå i midten-->
+    <div class="calculator">
+        <h1 class="header">Javascript Calculator</h1>
+        <input id="total" class="total" type="text" value="0" >
+        <button class="operator" style="margin-right: 10px">/</button>
+        <button class="operator" style="margin-right: 10px">x</button>
+        <button class="delete">DEL</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator" style="float: none">-</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator" style="float: none">+</button>
+        <button class="equal">=</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="zero">0</button>
+        <button class="number">.</button>
 
-    <input id="total" type="number" value="0">
-
-    <button>/</button> <!-- green dividering button -->
-    <button>x</button> <!-- green multiply button -->
-    <button onclick="clear()">DEL</button> <!-- red delete button (as bred as the other two combined)-->
-    <button value="7" onclick="number(7)">7</button> <!-- grey 7 button-->
-    <button onclick="number(8)">8</button> <!-- grey 8 button-->
-    <button onclick="number(9)">9</button> <!-- grey 9 button-->
-    <button>-</button> <!-- green minus button-->
-    <button onclick="number(4)">4</button> <!-- grey 4 button-->
-    <button onclick="number(5)">5</button> <!-- grey 5 button-->
-    <button onclick="number(6)">6</button> <!-- grey 6 button-->
-    <button>+</button> <!-- green plus button-->
-    <button onclick="number(1)">1</button> <!-- grey 1 button-->
-    <button onclick="number(2)">2</button> <!-- grey 2 button-->
-    <button onclick="number(3)">3</button> <!-- grey 3 button-->
-    <button onclick="number(0)">0</button> <!-- grey 0 button (as bred as the other two combined-->
-    <button>.</button> <!-- grey . button TODO WHAT TO DO WHEN COMMA IS CLICKED????-->
-    <button>=</button> <!-- blue equals button (as tall as two rows-->
-
-    <script>
-        function number(clickedNumber){
-            if(document.getElementById("total").value === 0){
-                document.getElementById("total").value = clickedNumber;
-            }
-        }
-        function expression(){
-
-        }
-        function clear(){
-            document.getElementById("total").value = 0;
-        }
-        function equals(){
-
-        }
-
-        //Skal erstatte nul hvis det er det eneste i displayet
-    </script>
+    </div>
 </body>
 </html>
