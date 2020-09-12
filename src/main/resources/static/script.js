@@ -17,8 +17,8 @@ function number(){
         firstNumber += $(this).text();
         //WHY DOES +firstNumber REMOVE the first letter !?!?!?!?!?!?!?
         total.val(+firstNumber);
-        alert(firstNumber);
     }
+    //else if comment operatorPressed true, første tal er done
     else{
         secondNumber += $(this).text();
         total.val(+secondNumber);
@@ -26,6 +26,12 @@ function number(){
 }
 
 function operator(){
+    //if second number isn't 0, then we have pressed an operator before.
+    //we then calculate the previous two numbers and put them in number1
+    //this frees number2 for a new value
+    if(secondNumber !== 0){
+        equals();
+    }
     operation = $(this).text();
     operatorPressed = true;
     $(".total").val(operation);
