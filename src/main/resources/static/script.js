@@ -13,12 +13,13 @@ $(document).ready(function () {
 
 function number(){
     var total = $(".total");
-    if(total.val() === 0 || !operatorPressed){
+    if(total.val() === "0" || !operatorPressed){
         firstNumber += $(this).text();
-        //WHY DOES +firstNumber REMOVE the first letter !?!?!?!?!?!?!?
+        //As far as I understand +firstNumber converts the var to a number, thus the first
+        //zero is removed
         total.val(+firstNumber);
     }
-    //else if comment operatorPressed true, første tal er done
+    //operatorPressed true, første tal er done
     else{
         secondNumber += $(this).text();
         total.val(+secondNumber);
